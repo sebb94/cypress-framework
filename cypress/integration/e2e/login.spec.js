@@ -3,7 +3,7 @@ import {
     login_password,
     login_username
 } from "../../../config"
-import Navbar from '../../page-objects/components/navbar'
+import Navbar from '../../page-objects/components/Navbar'
 import LoginPage from "../../page-objects/pages/LoginPage"
 
 describe('Login Failed Test', () => {
@@ -29,5 +29,10 @@ describe('Login Success Test', () => {
 
     it('Should login into application', () => {
         LoginPage.login(login_username,login_password)
+    });
+
+    it('should logout from application', () => {
+        Navbar.logout()
+        Navbar.displaySignInButton()
     });
 });
