@@ -1,0 +1,26 @@
+{
+  "name": "cypress_framework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "cy:update-snapshots" : "cypress run --env --updateSnapshots=true"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sebb94/cypress_framework.git"
+  },
+  "author": "Sebastian Gągor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sebb94/cypress_framework/issues"
+  },
+  "homepage": "https://github.com/sebb94/cypress_framework#readme",
+  "dependencies": {
+    "cypress": "^5.1.0",
+    "cypress-image-snapshot": "^3.1.1",
+    "prettier": "^2.1.1"
+  }
+}
