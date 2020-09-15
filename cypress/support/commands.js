@@ -43,3 +43,18 @@ Cypress.Commands.add('setResolution', (size) => {
         cy.viewport(size)
     }
 })
+
+Cypress.Commands.add('isVisible', selector => {
+    cy.get(selector).should('be.visible')
+})
+
+Cypress.Commands.add('isHidden', selector => {
+    cy.get(selector).should('not.exist')
+})
+
+Cypress.Commands.add('login', (username, password) => {
+    cy.get("#user_login").type(username)
+    cy.get("#user_password").type(passowrd)
+    cy.get('#user_remember_me').click()
+    cy.contains('Sign in').click()
+})
